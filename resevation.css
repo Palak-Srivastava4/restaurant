@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    box-sizing: border-box;
+    /*color: white;*/
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(131, 191, 75);
+    border-radius:50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 400px;
+    width:400px;
+    background-color: rgba(131, 191, 75, 0.218);
+    border-radius:50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+
+}
+#bg-img{
+    background-color: rgba(0, 0, 0, 0.959);
+}
+
+#contents h1{
+    font-size: 80px;
+    font-weight: 600;
+text-align: center;
+color: greenyellow;
+}
+
+#contents {
+    position: absolute;
+    margin-left: 400px;
+    align-items: center;
+   padding: 40px;
+   background-color: rgba(9, 8, 8, 0.575);
+    text-align: center;
+   
+}
+#contents h1{
+    font-size: 94px;
+}
+#contents p{
+    text-align: center;
+    margin: 5px;
+    font-size: 40px;
+    color: white;
+    padding: 20px;
+}
+input{
+    height: 50px;
+    font-size: 30px;
+    padding: 10px;
+}
+button{
+    cursor: pointer;
+    opacity: 0.8;
+    height: 80px;
+    font-size: 40px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: greenyellow;
+}
+button:hover{
+    opacity: 1;
+}
+#bg-img{
+    background-image: url(https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

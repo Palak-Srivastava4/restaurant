@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: white;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(131, 191, 75);
+    border-radius:50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 400px;
+    width:400px;
+    background-color: rgba(131, 191, 75, 0.218);
+    border-radius:50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+
+}
+
+#nav{
+    height: 145px;
+    width: 100%;
+   /* background-color: rgb(50, 46, 46); */
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 98;
+}
+
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color:rgba(0, 0, 0, 0.325);
+}
+#page1{
+height: 100vh;
+width: 100%;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 10;
+}
+
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before {
+content:"EAT. DRINK. ENJOY.";
+position: absolute;
+color: black;
+top: -6px;
+left: -6px;
+-webkit-text-stroke: 2px rgb(131, 191, 75);
+z-index: -1;
+}
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+ #scroller{
+   /* background-color: rgb(113, 65, 158);*/
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+ }
+ ::-webkit-scrollbar{
+    display: none;
+ }
+ #scroller-in{
+    display:inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ }
+ #scroller h4{
+    display:inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 2px rgb(131, 191, 75);
+ }
+ #scroller h4:hover{
+    color: rgb(131, 191, 75);
+ }
+
+ @keyframes scroll {
+    from{transform: translateX(0);}
+    to{transform: translateX(-100%);}
+ }
+
+ #about-us{
+    height: 40vh;
+    width: 100%;
+    /*background-color: blueviolet;*/
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+ }
+ #about-us img{
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+ }
+ #about-us-in{
+    width: 40%;
+    text-align: center;
+ }
+#about-us-in h3{
+    font-size: 54px;
+    font-weight: 800px;
+    margin-bottom: 30px;
+}
+#about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#cards-container{
+    height: 60vh;
+    /*background-color: blueviolet;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 80%;
+    width: 20%;
+    /*background-color: palevioletred;*/
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image: url(https://i.pinimg.com/originals/78/50/64/785064b81b650edf9db43fe7332fc588.jpg);
+}
+#card2{
+    background-image: url(https://st4.depositphotos.com/1017986/31284/i/600/depositphotos_312843254-stock-photo-family-having-dinner-party-and.jpg)
+}
+#card3{
+    background-image: url(https://i.pinimg.com/originals/18/4a/c3/184ac3e3a63d856a441e68acadbea39e.jpg)
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #ace022;
+    padding-top: 160px;
+    padding: 30px;
+    padding-left: 10px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4{
+    color: black;
+    font-size: 28px;
+    font-weight: 600px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.overlay p{
+    color: black;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#green-div{
+    height: 30vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+#green-div h4{
+    width: 45%;
+    font-size: 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+   text-align: center;
+   color: #000;
+   font-weight: 800;
+}
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+  }
+
+#page3{
+    min-height: 140vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#drinks{
+    min-height: 40vh;
+    width: 100%;
+    /*background-color: blueviolet;*/
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+ }
+ #drinks img{
+    height: 500px;
+    width: 900px;
+    border-radius: 10px;
+    object-fit: cover;
+    padding-top: 140px;
+    padding-left: 60px;
+    padding-right: 60px;
+ }
+#drinks-in{
+    width: 60%;
+    text-align: center;
+ }
+#drinks-in h4{
+    color: #ace022;
+    font-size: 54px;
+    font-weight: 800px;
+    margin-bottom: 30px;
+    padding-top: 200 px;
+    margin-top: 140px;
+}
+#drinks-in p{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#contact{
+   min-height: 60vh;
+}
+
+#contact>p{
+ position: relative;
+    font-size: 35px;
+    font-weight: 650;
+    width: 60%;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 160px;
+    margin-left: 340px;
+}
+#contact img{
+    height: 60px;
+    position: absolute;
+    z-index: 96;
+}
+#contact #colon1{
+    left: 10%;
+    top: 67%;
+}
+#contact #colon2{
+    right: 10%;
+    bottom: -2%;
+}
+#page4{
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    position: relative;
+    margin-top: 120px;
+    /*background-color: rgb(21, 75, 75);*/
+}
+#box-container{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    position: relative;
+    z-index: 10;
+}
+.box{
+    height: 80%;
+    width: 25%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#box1{
+    background-image: url(https://img.freepik.com/free-photo/catering-buffet-food_74190-4133.jpg?size=626&ext=jpg);
+}
+#box2{
+    background-image: url(https://img.freepik.com/premium-photo/wooden-reserved-sign-dining-table-restaurant_36367-578.jpg?size=626&ext=jpg);
+}
+#box3{
+    background-image: url(https://cdn.create.vista.com/api/media/small/294338828/stock-photo-food-delivery-concept-healthy-lunch-in-boxes);
+}
+.elem{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+   background-color: #ace022;
+    padding-top: 160px;
+    padding: 30px;
+    padding-left: 10px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.elem h4{
+    color: black;
+    font-weight: 800px;
+    white-space: nowrap;
+    margin: 20px;
+    text-align: center;
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 35px;
+}
+.box:hover .elem{
+    opacity: 1;
+}
+#page4 h2{
+    color:black;
+    position: absolute;
+    font-size: 90px;
+    font-weight: 700;
+    top: -18%;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke:2px white;
+}
